@@ -15,9 +15,9 @@ hiddenWidgets.forEach((element) => {
     observer.observe(element);
 });
 
-document.addEventListener("DOMContentLoaded", function(event) {
-    document.querySelectorAll('img').forEach(function(img){
-        img.onerror = function(){
+document.addEventListener("DOMContentLoaded", (event) => {
+    document.querySelectorAll('img').forEach((img) => {
+        img.onerror = () => {
             this.style.display = 'none';
         };
     })

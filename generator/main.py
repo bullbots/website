@@ -1,6 +1,7 @@
 import os
 import shutil
 import markdown
+from distutils.dir_util import copy_tree
 
 BUILD_DIRECTORY = '..\\docs'
 
@@ -33,7 +34,7 @@ def robots_page(nav):
             <div class="robot-widget animated-hidden">
                 <h2>SEASON - CHALLENGE TITLE</h2>
                 <div>
-                    <img src="../assets/robots/SEASON.png">
+                    <img src="assets/robots/SEASON.png">
                     <div>
                         <h3>ROBOT NAME</h3>
                         <p>DESCRIPTION</p>
@@ -82,12 +83,13 @@ if __name__ == "__main__":
             print('Failed to delete %s. Reason: %s' % (file_path, e))
 
     navigation = ""
-    all_files = []
     for (root, dirs, files) in os.walk('..\\pages', topdown=True):
-        all_files += files
         for file in [f for f in files if (f.endswith(".md") or f.endswith(".html")) and not f == 'index.md']:
             filename = file.split(".")[0]
             navigation += "<li><a href=\"%s\">%s</a></li>\n" % (filename + ".html", filename.replace("-", " ").title())
+
+    # Add Robots to navigation
+    navigation += "<li> <a href=robots.html>Robots</a></li>\n"
 
     print("Generated navigation:")
     print(navigation)
@@ -95,23 +97,11 @@ if __name__ == "__main__":
     # Generate the custom pages
     robots_page(navigation)
 
+    # Copy template and custom files
+    shutil.copy2("..\\template\\template-script.js", BUILD_DIRECTORY)
+    shutil.copy2("..\\template\\template-styles.css", BUILD_DIRECTORY)
+    copy_tree("..\\assets", "..\\docs\\assets")
     for (root, dirs, files) in os.walk('..\\pages', topdown=True):
-        # gen_path = '..\\docs\\' + root[len('..\\pages\\'):]
-        # if not gen_path.endswith('\\'):
-        #     gen_path += "\\"
-        # print(root)
-        # print(dirs)
-        # Copy the template js and css so all html files will be able to access it in the local directory
-        # There is probably a better way, but this is the easiest
-        # for directory in dirs:
-        #     os.mkdir(gen_path + directory)
-        #     shutil.copy2("..\\template\\template-script.js", "..\\docs\\" + directory)
-        #     shutil.copy2("..\\template\\template-styles.css", "..\\docs\\" + directory)
-
-        shutil.copy2("..\\template\\template-script.js", BUILD_DIRECTORY)
-        shutil.copy2("..\\template\\template-styles.css", BUILD_DIRECTORY)
-        # print(files)
-
         for file in files:
             filename = file.split(".")[0]
             # Convert each markdown file into an html snippet and create a full file using the template html
