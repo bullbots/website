@@ -1,0 +1,3 @@
+Steamworks
+Skybound
+Skybound excels in collecting gears and running them to the airship. Skybound also has a special climber that can latch onto any rope. It features a saw-blade on a mini-sim motor, which allows the robot to climb, but prevents the robot from slipping off the rope. The saw-blade mechanism that Skybound used to climb the rope won the Creativity award. Skybound is one of our smaller robots, weighing in at only 86 lbs. Skybound is happily active and frequently used for demos.

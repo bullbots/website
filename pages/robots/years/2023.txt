@@ -1,0 +1,7 @@
+Charged Up
+Rafiki
+This season, the BullBots had to create a robot that could intake and place both cones AND
+cubes onto shelves called the "grid." Thus, Rafiki was born with a versatile wheeled intake and
+grabbing arm mechanism that worked for both game pieces. Rafiki was also our first competition
+bot with a swerve drivetrain, which was a lot of fun to see running at both the Ventura County
+and Idaho Regional!

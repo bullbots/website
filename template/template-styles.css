@@ -1,0 +1,346 @@
+:root {
+    --light-primary-background-color: #eee;
+    --light-primary-background-color-hover: #fff;
+    --light-secondary-background-color: #aaa;
+    --light-secondary-background-color-hover: #ccc;
+    --light-primary-color: #000;
+    --light-primary-color-hover: #000;
+    --light-secondary-color: #444;
+    --light-secondary-color-hover: #444;
+    --light-accent-color: #1e47ff;
+    --light-accent-color-hover: #1e67ff;
+    --dark-primary-background-color: #000;
+    --dark-primary-background-color-hover: #111;
+    --dark-secondary-background-color: #222;
+    --dark-secondary-background-color-hover: #333;
+    --dark-primary-color: #fff;
+    --dark-primary-color-hover: #fff;
+    --dark-secondary-color: #ddd;
+    --dark-secondary-color-hover: #ddd;
+    --dark-accent-color: #027;
+    --dark-accent-color-hover: #039;
+
+    --navbar-height: 80px;
+    --footer-height: 50px;
+}
+
+nav {
+    /* Make navbar sticky */
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    margin: 0;
+    padding: 0px;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    
+    overflow: hidden;
+
+    transition: .2s;
+
+    height: var(--navbar-height);
+}
+
+a:focus, button:focus {
+    outline: none;
+}
+
+.dark-mode #home-button:focus {
+    background-image: linear-gradient(to right,  black, var(--dark-accent-color));
+}
+
+.light-mode #home-button:focus {
+    background-image: linear-gradient(to right,  white, var(--light-accent-color));
+}
+
+/* .dark-mode nav ul a:focus, .dark-mode button:focus {
+    background-color: var(--dark-accent-color-hover);
+}
+
+.light-mode nav ul a:focus, .light-mode button:focus {
+    background-color: var(--light-accent-color-hover);
+} */
+
+
+.dark-mode nav ul a:focus {
+    background-color: var(--dark-accent-color-hover);
+}
+
+.light-mode nav ul a:focus {
+    background-color: var(--light-accent-color-hover);
+}
+
+nav .nav-icon {
+display: none;
+/* background-color: pink; */
+
+position: absolute;
+right: 0;
+top: 0;
+}
+
+
+nav .nav-icon img {
+margin: 0;
+padding: 20px;
+max-height: calc(var(--navbar-height) - 40px);    
+}
+
+nav img {
+/* Fit image to size of navbar */
+margin: 0;
+padding: 4px;
+max-height: calc(var(--navbar-height) - 8px);
+
+/* position: absolute;
+left: 0;
+top: 0; */
+}
+
+footer ul img {
+    /* Fit image to size of footer */
+    margin: 0;
+    padding: 8px;
+    max-height: calc(var(--footer-height) - 16px);
+
+    transition: .3s;
+}
+
+button img {
+    max-height: 100%;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a {
+    display: block;
+    text-align: center;
+    margin: 0px 10px 0px 0px;
+    padding: 14px 16px;
+    text-decoration: none;
+    
+    border-radius: 15px;
+
+    font-weight: 600;
+
+    transition: .35s;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links. Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+    nav ul {
+        display: none;
+    }
+    nav .nav-icon {
+        float: right;
+        display: block;
+    }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+    nav.responsive {
+        /* border-radius: 50%; */
+        /* overflow-y: scroll; */
+        /* position: relative; */
+        height: 100%;
+        justify-content: center;
+    }
+    
+    nav.responsive #home-button {
+        display: none;
+    }
+
+    nav.responsive .nav-icon {
+        position: fixed;
+        right: 0;
+        top: 0;
+    }
+    
+    nav.responsive ul {
+        /* float: none; */
+        display: flex;
+        flex-direction: column;
+        /* text-align: left; */
+    }
+
+    nav.responsive ul li {
+        padding-top: 10px;
+    }
+}
+
+.dark-mode nav li a:hover {
+    background-color: var(--dark-accent-color-hover);
+}
+
+.light-mode nav li a:hover {
+    background-color: var(--light-accent-color-hover);
+}
+
+footer {
+    /* Make footer sticky */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+    margin: 0;
+    padding: 0px;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    
+    transition: .2s;
+
+    height: var(--footer-height);
+}
+
+footer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+footer li {
+    float: left;
+}
+
+footer li a {
+    display: block;
+    text-align: center;
+    margin: 0px 10px 0px 0px;
+    padding: 0px;
+    text-decoration: none;
+    
+    border-radius: 15px;
+
+    font-weight: 600;
+
+    transition: .35s;
+}
+
+/* .dark-mode footer li a:hover {
+    background-color: var(--dark-accent-color-hover);
+}
+
+.light-mode footer li a:hover {
+    background-color: var(--light-accent-color-hover);
+} */
+
+/* Used for some of the images in the footer */
+.round {
+    border-radius: 40%;
+}
+
+.hidden {
+    display: none;
+}
+
+footer li a:hover img, footer li a:focus img {
+    /* Enlarge image on hover */
+    margin: 0;
+    padding: 4px;
+    max-height: calc(var(--footer-height) - 8px);
+}
+    
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    transition: .2s;
+}
+
+.main-content {
+    padding: var(--navbar-height) 10% var(--footer-height) 10%;
+    /* min-width: 350px; */
+}
+
+.light-mode {
+    background-color: var(--light-primary-background-color);
+    color: var(--light-primary-color);
+}
+
+.dark-mode {
+    background-color: var(--dark-primary-background-color);
+    color: var(--dark-primary-color);
+}
+
+nav a, footer a {
+    color: var(--dark-primary-color);
+}
+
+/* .light-mode nav a {
+    color: var(--light-primary-color);
+}
+
+.dark-mode nav a {
+    color: var(--dark-primary-color);
+} */
+
+.light-mode nav, .light-mode footer {
+    background-color: var(--light-accent-color);
+}
+
+.dark-mode nav, .dark-mode footer {
+    background-color: var(--dark-accent-color);
+}
+
+.light-mode hgroup {
+    color: var(--light-primary-color);
+}
+
+.dark-mode hgroup {
+    color: var(--dark-primary-color);
+}
+
+.light-mode p {
+    color: var(--light-secondary-color);
+}
+
+.dark-mode p {
+    color: var(--dark-secondary-color);
+}
+
+button {
+    margin: 5px;
+    padding: 5px;
+    border: 0;
+    border-radius: .75lvw;
+    height: calc(var(--footer-height) - 10px);
+    width: calc(var(--footer-height) - 10px);
+
+    transition: .25s;
+}
+
+button:hover {
+    padding: 3px;
+    height: calc(var(--footer-height) - 6px);
+    width: calc(var(--footer-height) - 6px);
+}
+
+.light-mode button {
+    color: var(--light-primary-color);
+    background-color: var(--light-accent-color);
+}
+
+.dark-mode button {
+    color: var(--dark-primary-color);
+    background-color: var(--dark-accent-color);
+}
