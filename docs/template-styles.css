@@ -43,6 +43,8 @@ nav {
     transition: .2s;
 
     height: var(--navbar-height);
+
+    z-index: 2;
 }
 
 a:focus, button:focus {
@@ -57,15 +59,6 @@ a:focus, button:focus {
     background-image: linear-gradient(to right,  white, var(--light-accent-color));
 }
 
-/* .dark-mode nav ul a:focus, .dark-mode button:focus {
-    background-color: var(--dark-accent-color-hover);
-}
-
-.light-mode nav ul a:focus, .light-mode button:focus {
-    background-color: var(--light-accent-color-hover);
-} */
-
-
 .dark-mode nav ul a:focus {
     background-color: var(--dark-accent-color-hover);
 }
@@ -75,30 +68,30 @@ a:focus, button:focus {
 }
 
 nav .nav-icon {
-display: none;
-/* background-color: pink; */
+    display: none;
+    /* background-color: pink; */
 
-position: absolute;
-right: 0;
-top: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 
 
 nav .nav-icon img {
-margin: 0;
-padding: 20px;
-max-height: calc(var(--navbar-height) - 40px);    
+    margin: 0;
+    padding: 20px;
+    max-height: calc(var(--navbar-height) - 40px);    
 }
 
 nav img {
-/* Fit image to size of navbar */
-margin: 0;
-padding: 4px;
-max-height: calc(var(--navbar-height) - 8px);
+    /* Fit image to size of navbar */
+    margin: 0;
+    padding: 4px;
+    max-height: calc(var(--navbar-height) - 8px);
 
-/* position: absolute;
-left: 0;
-top: 0; */
+    /* position: absolute;
+    left: 0;
+    top: 0; */
 }
 
 footer ul img {
@@ -207,6 +200,8 @@ footer {
     transition: .2s;
 
     height: var(--footer-height);
+
+    z-index: 2;
 }
 
 footer ul {
@@ -233,14 +228,6 @@ footer li a {
 
     transition: .35s;
 }
-
-/* .dark-mode footer li a:hover {
-    background-color: var(--dark-accent-color-hover);
-}
-
-.light-mode footer li a:hover {
-    background-color: var(--light-accent-color-hover);
-} */
 
 /* Used for some of the images in the footer */
 .round {
@@ -270,6 +257,8 @@ body {
 .main-content {
     padding: var(--navbar-height) 10% var(--footer-height) 10%;
     /* min-width: 350px; */
+
+    z-index: 1;
 }
 
 .light-mode {
@@ -285,14 +274,6 @@ body {
 nav a, footer a {
     color: var(--dark-primary-color);
 }
-
-/* .light-mode nav a {
-    color: var(--light-primary-color);
-}
-
-.dark-mode nav a {
-    color: var(--dark-primary-color);
-} */
 
 .light-mode nav, .light-mode footer {
     background-color: var(--light-accent-color);

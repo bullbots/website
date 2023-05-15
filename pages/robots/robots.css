@@ -42,6 +42,7 @@ h3, p {
 
 .robot-widget div img {
     width: 40%;
+    min-width: 40%;
     height: min-content;
 }
 

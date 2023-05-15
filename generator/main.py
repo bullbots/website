@@ -13,6 +13,7 @@ CUSTOM_SCRIPTS = "CUSTOM SCRIPTS"
 
 # Custom pages:
 def robots_page(nav):
+    print("Generating robot.html from /pages/robots/ directory")
     try:
         robot_generated_html = ""
         # Copy any custom js and css
@@ -34,7 +35,7 @@ def robots_page(nav):
             <div class="robot-widget animated-hidden">
                 <h2>SEASON - CHALLENGE TITLE</h2>
                 <div>
-                    <img src="assets/robots/SEASON.png">
+                    <img src="assets/robots/IMAGE FILE NAME.png" onerror="this.style.display='none'">
                     <div>
                         <h3>ROBOT NAME</h3>
                         <p>DESCRIPTION</p>
@@ -44,11 +45,13 @@ def robots_page(nav):
             """
             with open(os.path.join("..\\pages\\robots\\years", filename), 'r') as file:
                 print("Reading file " + filename)
-                season = filename.split(".")[0]
+                image_file_name = filename.split(".")[0]
+                season = image_file_name.replace("-", " ").title()
                 challenge_title = file.readline(-1)
                 robot_name = file.readline(-1)
                 description = file.read()
                 robot_template_html = robot_template_html.replace("SEASON", season)
+                robot_template_html = robot_template_html.replace("IMAGE FILE NAME", image_file_name)
                 robot_template_html = robot_template_html.replace("CHALLENGE TITLE", challenge_title)
                 robot_template_html = robot_template_html.replace("ROBOT NAME", robot_name)
                 robot_template_html = robot_template_html.replace("DESCRIPTION", description)
@@ -110,7 +113,10 @@ if __name__ == "__main__":
                 md = markdown.markdown(open(root + "\\" + file).read())
 
                 template_html = open("..\\template\\template.html").read()
-                template_html = template_html.replace(TITLE, filename.replace("-", " ").title())
+                if filename == "index":
+                    template_html = template_html.replace(TITLE, "Bullbots")
+                else:
+                    template_html = template_html.replace(TITLE, filename.replace("-", " ").title())
                 template_html = template_html.replace(NAVIGATION, navigation)
                 template_html = template_html.replace(MAIN_CONTENT, md)
                 template_html = template_html.replace(CUSTOM_SCRIPTS, "")
@@ -138,7 +144,10 @@ if __name__ == "__main__":
                 custom_html = open(root + "\\" + file).read()
 
                 template_html = open("..\\template\\template.html").read()
-                template_html = template_html.replace(TITLE, filename.replace("-", " ").title())
+                if filename == "index":
+                    template_html = template_html.replace(TITLE, "Bullbots")
+                else:
+                    template_html = template_html.replace(TITLE, filename.replace("-", " ").title())
                 template_html = template_html.replace(NAVIGATION, navigation)
                 template_html = template_html.replace(MAIN_CONTENT, custom_html)
                 template_html = template_html.replace(CUSTOM_SCRIPTS, custom_scripts)
