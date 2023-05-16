@@ -8,5 +8,3 @@ FIRST Robotics Competition challenges students to think outside the box and crea
 
 ## Charged Up 2023
 Two alliances must compete against each other to bring energy to their community. For alliances to bring energy they can retrieve and score cones and/or cubes to the grid, and dock onto their charge station. The first 15 seconds, alliance robots may do this autonomously to receive extra points. The last 30 seconds of the match the robots race to dock or engage with their charge station. The alliance with the highest score at the end of the match wins.
-
-Want to learn more about CHARGED UP? Visit the link below to learn more about our 2023 competition.

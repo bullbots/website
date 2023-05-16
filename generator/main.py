@@ -47,8 +47,8 @@ def robots_page(nav):
                 print("Reading file " + filename)
                 image_file_name = filename.split(".")[0]
                 season = image_file_name.replace("-", " ").title()
-                challenge_title = file.readline(-1)
-                robot_name = file.readline(-1)
+                challenge_title = file.readline().strip()
+                robot_name = file.readline().strip()
                 description = file.read()
                 robot_template_html = robot_template_html.replace("SEASON", season)
                 robot_template_html = robot_template_html.replace("IMAGE FILE NAME", image_file_name)
@@ -72,6 +72,61 @@ def robots_page(nav):
               "not be found.")
 
 
+def alumni_page(nav):
+    print("Generating alumni.html from /pages/alumni/ directory")
+    try:
+        alumni_generated_html = ""
+        # Copy any custom js and css
+        custom_scripts = ""
+        try:
+            shutil.copy2("..\\pages\\alumni\\alumni.js", BUILD_DIRECTORY)
+            custom_scripts += "<script src=\"alumni.js\" defer></script>\n"
+        except FileNotFoundError:
+            print("No file found for \"alumni.js\"")
+        try:
+            shutil.copy2("..\\pages\\alumni\\alumni.css", BUILD_DIRECTORY)
+            custom_scripts += "<link rel=\"stylesheet\" href=\"alumni.css\">"
+        except FileNotFoundError:
+            print("No file found for \"alumni.css\"")
+
+        # Generate the content for each year
+        for filename in reversed(os.listdir("..\\pages\\alumni\\years")):
+            alumni_template_html = """
+<div class="alumni-widget animated-hidden">
+    <h2>YEAR</h2>
+    <div>
+        ALUMNI
+    </div>
+</div>
+            """
+            with open(os.path.join("..\\pages\\alumni\\years", filename), 'r') as file:
+                print("Reading file " + filename)
+                year = filename.split(".")[0].replace("-", " ").title()
+                alumni = ""
+                while file:
+                    student = file.readline()
+                    alumni += "<p>%s</p>\n" % student
+                    if student == '':
+                        break
+                alumni_template_html = alumni_template_html.replace("YEAR", year)
+                alumni_template_html = alumni_template_html.replace("ALUMNI", alumni)
+                # Add each year's content to the whole
+                alumni_generated_html += alumni_template_html
+
+        # Fill in the template with all of the generated content
+        template_html = open("..\\template\\template.html").read()
+        template_html = template_html.replace(TITLE, "Alumni")
+        template_html = template_html.replace(NAVIGATION, nav)
+        template_html = template_html.replace(MAIN_CONTENT, alumni_generated_html)
+        template_html = template_html.replace(CUSTOM_SCRIPTS, custom_scripts)
+
+        generated_html = open(BUILD_DIRECTORY + "\\alumni.html", 'x')
+        generated_html.write(template_html)
+    except FileNotFoundError:
+        print("Attempt to generate \"Alumni\" page was unsuccessful because the path ..\\pages\\alumni\\years could "
+              "not be found.")
+
+
 if __name__ == "__main__":
     # Delete ..\docs\ directory to be rewritten
     folder = BUILD_DIRECTORY+'\\'
@@ -86,19 +141,20 @@ if __name__ == "__main__":
             print('Failed to delete %s. Reason: %s' % (file_path, e))
 
     navigation = ""
+    # Add Alumni and Robots to navigation
+    navigation += "<li> <a href=alumni.html>Alumni</a></li>\n"
+    navigation += "<li> <a href=robots.html>Robots</a></li>\n"
     for (root, dirs, files) in os.walk('..\\pages', topdown=True):
         for file in [f for f in files if (f.endswith(".md") or f.endswith(".html")) and not f == 'index.md']:
             filename = file.split(".")[0]
             navigation += "<li><a href=\"%s\">%s</a></li>\n" % (filename + ".html", filename.replace("-", " ").title())
-
-    # Add Robots to navigation
-    navigation += "<li> <a href=robots.html>Robots</a></li>\n"
 
     print("Generated navigation:")
     print(navigation)
 
     # Generate the custom pages
     robots_page(navigation)
+    alumni_page(navigation)
 
     # Copy template and custom files
     shutil.copy2("..\\template\\template-script.js", BUILD_DIRECTORY)
