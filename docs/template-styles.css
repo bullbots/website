@@ -103,7 +103,7 @@ footer ul img {
     transition: .3s;
 }
 
-button img {
+footer button img {
     max-height: 100%;
 }
 
@@ -302,9 +302,12 @@ nav a, footer a {
 }
 
 button {
+    border: none;
+}
+
+footer button {
     margin: 5px;
     padding: 5px;
-    border: 0;
     border-radius: .75lvw;
     height: calc(var(--footer-height) - 10px);
     width: calc(var(--footer-height) - 10px);
@@ -312,7 +315,7 @@ button {
     transition: .25s;
 }
 
-button:hover {
+footer button:hover {
     padding: 3px;
     height: calc(var(--footer-height) - 6px);
     width: calc(var(--footer-height) - 6px);

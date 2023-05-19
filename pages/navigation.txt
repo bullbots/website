@@ -2,5 +2,4 @@ summer-camps
 robots
 alumni
 mentors
-impact
 contact-us
