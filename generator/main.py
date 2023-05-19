@@ -25,6 +25,16 @@ def generate_navigation() -> str:
     return nav
 
 
+def generate_sponsors() -> str:
+    sponsor_images = ""
+    for filename in os.listdir("..\\assets\\home\\sponsors"):
+        print(filename)
+        sponsor_images += "<img class='sponsor-image' src='assets/home/sponsors/" + filename + \
+                          "' onerror=\"this.style.display='none'\">\n"
+
+    return sponsor_images
+
+
 # Custom pages:
 def robots_page(nav):
     print("Generating robot.html from /pages/robots/ directory")
@@ -214,6 +224,7 @@ if __name__ == "__main__":
                 template_html = open("..\\template\\template.html").read()
                 if filename == "index":
                     template_html = template_html.replace(TITLE, "Bullbots")
+                    custom_html = custom_html.replace("SPONSORS", generate_sponsors())
                 else:
                     template_html = template_html.replace(TITLE, filename.replace("-", " ").title())
                 template_html = template_html.replace(NAVIGATION, navigation)

@@ -81,3 +81,13 @@ form button {
 .light-mode form button:focus {
     background-color: var(--light-accent-color-hover);
 }
+
+.map {
+    margin: 0 0 50px 0;
+    border-radius: 15px;
+    max-width:100%;
+    list-style:none;
+    transition: none;
+    overflow:hidden;
+    height:500px;
+}
