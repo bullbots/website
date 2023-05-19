@@ -1,7 +1,7 @@
-<form action="mailto:stephenday1804@gmail.com">
-    <input type="email" placeholder="Your Email Address" name="email" required>
-    <input type="text" placeholder="Subject" name="subject" required>
-    <!-- <input type="text" placeholder="Type your message here" name="body" required> -->
-    <textarea id="message" rows="5" placeholder="Type your message here."></textarea>
-    <input type="submit" value="Send">
+<form action="https://formsubmit.co/stephenday1804@gmail.com" method="POST">
+    <input type="text" name="_subject" placeholder="What are you contacting us about?" required>
+    <input type="text" name="name" placeholder="Type your message here" required>
+    <input type="email" name="email" placeholder="Your email address" required>
+    <input type="hidden" name="_next" value="thank-you.html">
+    <button type="submit">Send</button>
 </form>
