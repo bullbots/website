@@ -11,6 +11,20 @@ MAIN_CONTENT = 'MAIN CONTENT'
 CUSTOM_SCRIPTS = "CUSTOM SCRIPTS"
 
 
+def generate_navigation() -> str:
+    nav = ''
+    with open(os.path.join("..\\pages", "navigation.txt"), 'r') as file:
+        while file:
+            page = file.readline()
+            if page == '':
+                break
+            nav += '<li><a href=\"%s.html\">%s</a></li>\n' % (page.strip(), page.replace('-', ' ').strip().title())
+
+    print("Generated navigation:")
+    print(nav)
+    return nav
+
+
 # Custom pages:
 def robots_page(nav):
     print("Generating robot.html from /pages/robots/ directory")
@@ -95,7 +109,7 @@ def alumni_page(nav):
 <div class="alumni-widget animated-hidden">
     <h2>YEAR</h2>
     <div>
-        ALUMNI
+ALUMNI
     </div>
 </div>
             """
@@ -104,10 +118,10 @@ def alumni_page(nav):
                 year = filename.split(".")[0].replace("-", " ").title()
                 alumni = ""
                 while file:
-                    student = file.readline()
-                    alumni += "<p>%s</p>\n" % student
+                    student = file.readline().strip()
                     if student == '':
                         break
+                    alumni += "<p>%s</p>\n" % student
                 alumni_template_html = alumni_template_html.replace("YEAR", year)
                 alumni_template_html = alumni_template_html.replace("ALUMNI", alumni)
                 # Add each year's content to the whole
@@ -140,17 +154,15 @@ if __name__ == "__main__":
         except Exception as e:
             print('Failed to delete %s. Reason: %s' % (file_path, e))
 
-    navigation = ""
-    # Add Alumni and Robots to navigation
-    navigation += "<li> <a href=alumni.html>Alumni</a></li>\n"
-    navigation += "<li> <a href=robots.html>Robots</a></li>\n"
-    for (root, dirs, files) in os.walk('..\\pages', topdown=True):
-        for file in [f for f in files if (f.endswith(".md") or f.endswith(".html")) and not f == 'index.md']:
-            filename = file.split(".")[0]
-            navigation += "<li><a href=\"%s\">%s</a></li>\n" % (filename + ".html", filename.replace("-", " ").title())
-
-    print("Generated navigation:")
-    print(navigation)
+    navigation = generate_navigation()
+    # navigation = ""
+    # # Add Alumni and Robots to navigation manually
+    # navigation += "<li><a href=\"alumni.html\">Alumni</a></li>\n"
+    # navigation += "<li><a href=\"robots.html\">Robots</a></li>\n"
+    # for (root, dirs, files) in os.walk('..\\pages', topdown=True):
+    #     for file in [f for f in files if (f.endswith(".md") or f.endswith(".html")) and not 'index' in f]:
+    #         filename = file.split(".")[0]
+    #         navigation += "<li><a href=\"%s\">%s</a></li>\n" % (filename + ".html", filename.replace("-", " ").title())
 
     # Generate the custom pages
     robots_page(navigation)
@@ -190,12 +202,12 @@ if __name__ == "__main__":
                     shutil.copy2(root + "\\" + filename + ".js", BUILD_DIRECTORY)
                     custom_scripts += "<script src=\"%s.js\" defer></script>\n" % filename
                 except FileNotFoundError:
-                    print("No file found for \"%s\"" % file)
+                    print("No file found for \"%s.js\"" % file)
                 try:
                     shutil.copy2(root + "\\" + filename + ".css", BUILD_DIRECTORY)
                     custom_scripts += "<link rel=\"stylesheet\" href=\"%s.css\">" % filename
                 except FileNotFoundError:
-                    print("No file found for \"%s\"" % file)
+                    print("No file found for \"%s.css\"" % file)
 
                 custom_html = open(root + "\\" + file).read()
 
