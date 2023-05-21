@@ -1,3 +1,5 @@
+<!-- <img src="assets/summer-camp/crazy.png" onerror="this.style.display='none'"> -->
+
 # Summer Camps
 
 ### What Do the Campers Do?
