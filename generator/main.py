@@ -18,7 +18,7 @@ def generate_navigation() -> str:
             page = file.readline()
             if page == '':
                 break
-            nav += '<li><a href=\"%s.html\">%s</a></li>\n' % (page.strip(), page.replace('-', ' ').strip().title())
+            nav += '\t<li><a href=\"%s.html\">%s</a></li>\n' % (page.strip(), page.replace('-', ' ').strip().title())
 
     print("Generated navigation:")
     print(nav)
@@ -28,7 +28,7 @@ def generate_navigation() -> str:
 def generate_sponsors() -> str:
     sponsor_images = ""
     for filename in os.listdir("..\\assets\\home\\sponsors"):
-        print(filename)
+        print("\t" + filename)
         sponsor_images += "<img class='sponsor-image' src='assets/home/sponsors/" + filename + \
                           "' onerror=\"this.style.display='none'\">\n"
 
@@ -46,12 +46,12 @@ def robots_page(nav):
             shutil.copy2("..\\pages\\robots\\robots.js", BUILD_DIRECTORY)
             custom_scripts += "<script src=\"robots.js\" defer></script>\n"
         except FileNotFoundError:
-            print("No file found for \"robots.js\"")
+            print("\tNo file found for \"robots.js\"")
         try:
             shutil.copy2("..\\pages\\robots\\robots.css", BUILD_DIRECTORY)
             custom_scripts += "<link rel=\"stylesheet\" href=\"robots.css\">"
         except FileNotFoundError:
-            print("No file found for \"robots.css\"")
+            print("\tNo file found for \"robots.css\"")
 
         # Generate the content for each year
         for filename in reversed(os.listdir("..\\pages\\robots\\years")):
@@ -68,7 +68,7 @@ def robots_page(nav):
             </div>
             """
             with open(os.path.join("..\\pages\\robots\\years", filename), 'r') as file:
-                print("Reading file " + filename)
+                print("\tReading file " + filename)
                 image_file_name = filename.split(".")[0]
                 season = image_file_name.replace("-", " ").title()
                 challenge_title = file.readline().strip()
@@ -106,12 +106,12 @@ def alumni_page(nav):
             shutil.copy2("..\\pages\\alumni\\alumni.js", BUILD_DIRECTORY)
             custom_scripts += "<script src=\"alumni.js\" defer></script>\n"
         except FileNotFoundError:
-            print("No file found for \"alumni.js\"")
+            print("\tNo file found for \"alumni.js\"")
         try:
             shutil.copy2("..\\pages\\alumni\\alumni.css", BUILD_DIRECTORY)
             custom_scripts += "<link rel=\"stylesheet\" href=\"alumni.css\">"
         except FileNotFoundError:
-            print("No file found for \"alumni.css\"")
+            print("\tNo file found for \"alumni.css\"")
 
         # Generate the content for each year
         for filename in reversed(os.listdir("..\\pages\\alumni\\years")):
@@ -124,7 +124,7 @@ ALUMNI
 </div>
             """
             with open(os.path.join("..\\pages\\alumni\\years", filename), 'r') as file:
-                print("Reading file " + filename)
+                print("\tReading file " + filename)
                 year = filename.split(".")[0].replace("-", " ").title()
                 alumni = ""
                 while file:
@@ -190,6 +190,19 @@ if __name__ == "__main__":
                 print("Generating \"%s.html\" from \"%s.md\"" % (filename, filename))
                 md = markdown.markdown(open(root + "\\" + file).read())
 
+                # Copy any custom js and css
+                custom_scripts = ""
+                try:
+                    shutil.copy2(root + "\\" + filename + ".js", BUILD_DIRECTORY)
+                    custom_scripts += "<script src=\"%s.js\" defer></script>\n" % filename
+                except FileNotFoundError:
+                    print("\tNo file found for \"%s.js\"" % filename)
+                try:
+                    shutil.copy2(root + "\\" + filename + ".css", BUILD_DIRECTORY)
+                    custom_scripts += "<link rel=\"stylesheet\" href=\"%s.css\">" % filename
+                except FileNotFoundError:
+                    print("\tNo file found for \"%s.css\"" % filename)
+
                 template_html = open("..\\template\\template.html").read()
                 if filename == "index":
                     template_html = template_html.replace(TITLE, "Bullbots")
@@ -197,7 +210,7 @@ if __name__ == "__main__":
                     template_html = template_html.replace(TITLE, filename.replace("-", " ").title())
                 template_html = template_html.replace(NAVIGATION, navigation)
                 template_html = template_html.replace(MAIN_CONTENT, md)
-                template_html = template_html.replace(CUSTOM_SCRIPTS, "")
+                template_html = template_html.replace(CUSTOM_SCRIPTS, custom_scripts)
 
                 # print("gen_path:", gen_path)
                 # generated_html = open(gen_path + filename + ".html", 'x')
@@ -212,12 +225,12 @@ if __name__ == "__main__":
                     shutil.copy2(root + "\\" + filename + ".js", BUILD_DIRECTORY)
                     custom_scripts += "<script src=\"%s.js\" defer></script>\n" % filename
                 except FileNotFoundError:
-                    print("No file found for \"%s.js\"" % file)
+                    print("\tNo file found for \"%s.js\"" % file)
                 try:
                     shutil.copy2(root + "\\" + filename + ".css", BUILD_DIRECTORY)
                     custom_scripts += "<link rel=\"stylesheet\" href=\"%s.css\">" % filename
                 except FileNotFoundError:
-                    print("No file found for \"%s.css\"" % file)
+                    print("\tNo file found for \"%s.css\"" % file)
 
                 custom_html = open(root + "\\" + file).read()
 
