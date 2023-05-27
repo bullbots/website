@@ -1,7 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="afa80088-4db0-4152-8463-80447284a07b" name="Default Changelist" comment="" />
+    <list default="true" id="afa80088-4db0-4152-8463-80447284a07b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/alumni.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/alumni.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/camp-register.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/camp-register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/contact-us.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/contact-us.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/impact.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/impact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/robots.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/robots.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/summer-camps.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/summer-camps.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/template-styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/docs/template-styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/thank-you.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/thank-you.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/template-styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/template/template-styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/template.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/template.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -11,8 +45,12 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="2Pbd3psd5kGYDN53S6eaT2wwlsf" />
   <component name="ProjectViewState">
@@ -20,11 +58,13 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Steph\OnceDriven\Programming\FRC\BullBots\website\assets\home" />
       <recent name="C:\Users\Steph\OnceDriven\Programming\FRC\BullBots\website\pages\robots" />
       <recent name="C:\Users\Steph\OnceDriven\Programming\FRC\BullBots\website\pages" />
     </key>
@@ -68,42 +108,63 @@
     </task>
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="549" y="154" key="FileChooserDialogImpl" timestamp="1684165093621">
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1684956715280">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="154" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1684165093621" />
-    <state width="1515" height="377" key="GridCell.Tab.0.bottom" timestamp="1684176468621">
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1684956715280" />
+    <state x="540" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1684271785673">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="377" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1684176468621" />
+    <state x="540" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1684271785673" />
+    <state x="549" y="154" key="FileChooserDialogImpl" timestamp="1684761516015">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="154" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1684761516015" />
+    <state width="1515" height="334" key="GridCell.Tab.0.bottom" timestamp="1684709424346">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="334" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1684709424346" />
     <state width="1899" height="377" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1684171626865" />
     <state width="1515" height="284" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1683822602825" />
-    <state width="1515" height="377" key="GridCell.Tab.0.center" timestamp="1684176468621">
+    <state width="1515" height="334" key="GridCell.Tab.0.center" timestamp="1684709424346">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="377" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1684176468621" />
+    <state width="1515" height="334" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1684709424346" />
     <state width="1899" height="377" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1684171626865" />
     <state width="1515" height="284" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1683822602824" />
-    <state width="1515" height="377" key="GridCell.Tab.0.left" timestamp="1684176468621">
+    <state width="1515" height="334" key="GridCell.Tab.0.left" timestamp="1684709424346">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="377" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1684176468621" />
+    <state width="1515" height="334" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1684709424346" />
     <state width="1899" height="377" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1684171626865" />
     <state width="1515" height="284" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1683822602824" />
-    <state width="1515" height="377" key="GridCell.Tab.0.right" timestamp="1684176468621">
+    <state width="1515" height="334" key="GridCell.Tab.0.right" timestamp="1684709424346">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="377" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1684176468621" />
+    <state width="1515" height="334" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1684709424346" />
     <state width="1899" height="377" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1684171626865" />
     <state width="1515" height="284" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1683822602825" />
     <state x="277" y="57" key="SettingsEditor" timestamp="1683729712190">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1683729712190" />
-    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1684168310134">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state x="498" y="178" width="672" height="538" key="search.everywhere.popup" timestamp="1684177969347">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="498" y="178" width="672" height="538" key="search.everywhere.popup/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1684177969347" />
     <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1684168310134" />
   </component>
 </project>

@@ -1,6 +1,6 @@
 .main-content {
     margin: 0;
-    padding: var(--navbar-height) 0 var(--footer-height) 0;
+    padding: 0;
 
     justify-content: center;
     align-items: center;

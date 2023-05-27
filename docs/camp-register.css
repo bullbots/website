@@ -1,6 +1,6 @@
 .main-content {
     align-items: center;
-    padding: var(--navbar-height) 0 var(--footer-height) 0;
+    padding: 0;
 }
 
 .main-content iframe {
