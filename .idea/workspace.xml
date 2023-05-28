@@ -20,21 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="afa80088-4db0-4152-8463-80447284a07b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/alumni.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/alumni.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/camp-register.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/camp-register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/contact-us.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/contact-us.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/impact.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/impact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/robots.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/robots.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/summer-camps.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/summer-camps.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/template-styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/docs/template-styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/thank-you.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/thank-you.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/template-styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/template/template-styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/template.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/template.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/camp-register.css" beforeDir="false" afterPath="$PROJECT_DIR$/docs/camp-register.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/camp-register/camp-register.css" beforeDir="false" afterPath="$PROJECT_DIR$/pages/camp-register/camp-register.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,28 +120,28 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="154" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1684761516015" />
-    <state width="1515" height="334" key="GridCell.Tab.0.bottom" timestamp="1684709424346">
+    <state width="1515" height="334" key="GridCell.Tab.0.bottom" timestamp="1685223185278">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="334" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1684709424346" />
+    <state width="1515" height="334" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1685223185278" />
     <state width="1899" height="377" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1684171626865" />
     <state width="1515" height="284" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1683822602825" />
-    <state width="1515" height="334" key="GridCell.Tab.0.center" timestamp="1684709424346">
+    <state width="1515" height="334" key="GridCell.Tab.0.center" timestamp="1685223185277">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="334" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1684709424346" />
+    <state width="1515" height="334" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1685223185277" />
     <state width="1899" height="377" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1684171626865" />
     <state width="1515" height="284" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1683822602824" />
-    <state width="1515" height="334" key="GridCell.Tab.0.left" timestamp="1684709424346">
+    <state width="1515" height="334" key="GridCell.Tab.0.left" timestamp="1685223185277">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="334" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1684709424346" />
+    <state width="1515" height="334" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1685223185277" />
     <state width="1899" height="377" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1684171626865" />
     <state width="1515" height="284" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1683822602824" />
-    <state width="1515" height="334" key="GridCell.Tab.0.right" timestamp="1684709424346">
+    <state width="1515" height="334" key="GridCell.Tab.0.right" timestamp="1685223185277">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="334" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1684709424346" />
+    <state width="1515" height="334" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1685223185277" />
     <state width="1899" height="377" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1684171626865" />
     <state width="1515" height="284" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1683822602825" />
     <state x="277" y="57" key="SettingsEditor" timestamp="1683729712190">
