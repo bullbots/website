@@ -127,10 +127,7 @@ h1, h2, h3, h4, h5, h6, p {
     grid-auto-columns: 1fr; */
 }
 
-.widget a {
-    color: var(--dark-primary-color);
-    background-color: var(--dark-accent-color);
-
+.button-panel a {
     flex-grow: 1;
 
     display: block;
@@ -148,8 +145,22 @@ h1, h2, h3, h4, h5, h6, p {
     max-width: 200px;
 }
 
-.widget a:hover, .widget a:focus {
+.dark-mode .button-panel a {
+    color: var(--dark-primary-color);
+    background-color: var(--dark-accent-color);
+}
+
+.light-mode .button-panel a {
+    color: var(--dark-primary-color);
+    background-color: var(--light-accent-color);
+}
+
+.dark-mode .button-panel a:hover, .dark-mode .button-panel a:focus {
     background-color: var(--dark-accent-color-hover);
+}
+
+.light-mode .button-panel a:hover, .light-mode .button-panel a:focus {
+    background-color: var(--light-accent-color-hover);
 }
 
 /* Rearrange content if screen is too small */
