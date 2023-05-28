@@ -3,6 +3,18 @@
     margin: auto;
 }
 
+#email-button {
+    cursor: pointer;
+}
+
+.dark-mode #email-button {
+    color: lightblue;
+}
+
+.light-mode #email-button {
+    color: var(--light-accent-color);
+}
+
 form {
     margin: 0 auto;
     width: 100%;
@@ -61,7 +73,7 @@ form button {
 
     max-width: 200px;
 }
-
+/* 
 .dark-mode form button {
     color: var(--dark-primary-color);
     background-color: var(--dark-accent-color);
@@ -70,7 +82,7 @@ form button {
 .light-mode form button {
     color: var(--light-primary-color);
     background-color: var(--light-accent-color);
-}
+} */
 
 .dark-mode form button:hover,
 .dark-mode form button:focus {

@@ -20,4 +20,4 @@ Each year the Bullbots host a couple of week long summer camps for kids ages 9-1
 
 <a id='sign-up' href='camp-register.html'>Sign Up</a>
 
-If you have questions, contact <b>crystalrobison@gmail.com</b> directly.
+If you have questions, contact <a id="email-button" onclick="navigator.clipboard.writeText('crystalrobison@gmail.com');">crystalrobison@gmail.com</a> directly.

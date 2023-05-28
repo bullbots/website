@@ -359,7 +359,7 @@ footer button:hover {
 }
 
 .light-mode button {
-    color: var(--light-primary-color);
+    color: var(--dark-primary-color);
     background-color: var(--light-accent-color);
 }
 

@@ -6,11 +6,15 @@
     text-decoration: none;
 }
 
-.dark-mode .main-content ul li a {
+#email-button {
+    cursor: pointer;
+}
+
+.dark-mode .main-content ul li a, .dark-mode #email-button {
     color: lightblue;
 }
 
-.light-mode .main-content ul li a {
+.light-mode .main-content ul li a, .light-mode #email-button {
     color: var(--light-accent-color);
 }
 
