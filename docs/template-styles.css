@@ -292,7 +292,7 @@ body {
 }
 
 .main-content {
-    padding: 0 10%;
+    padding: 0 10% 20vh;
     display: flex;
     flex-direction: column;
     /* min-width: 350px; */
